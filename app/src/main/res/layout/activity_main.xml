@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_7sdp"
+    tools:context=".ui.MainActivity">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPokemonPic"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="@dimen/_5sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@+id/ivPokemonPic" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHeadMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moves"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvPokemonName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMoves"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintEnd_toEndOf="@id/tvHeadMove"
+        app:layout_constraintStart_toStartOf="@id/tvHeadMove"
+        app:layout_constraintTop_toBottomOf="@id/tvHeadMove"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHeadStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/statistics"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@id/rvMoves"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintEnd_toEndOf="@id/tvHeadMove"
+        app:layout_constraintStart_toStartOf="@id/tvHeadMove"
+        app:layout_constraintTop_toBottomOf="@id/tvHeadStatistics"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:elevation="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_refresh"
+        android:contentDescription="@string/refresh"
+        android:layout_margin="@dimen/_7sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
