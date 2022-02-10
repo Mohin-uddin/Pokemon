@@ -95,9 +95,6 @@ class MainActivity : AppCompatActivity() {
             viewModel.randomNumberSelect()
             viewModel.getPokemonDetails()
         }
-        else{
-            Toast.makeText(this,"Data not available",Toast.LENGTH_SHORT).show()
-        }
     }
 
 

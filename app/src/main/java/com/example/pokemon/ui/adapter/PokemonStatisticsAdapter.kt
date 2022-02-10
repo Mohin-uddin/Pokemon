@@ -32,8 +32,10 @@ class PokemonStatisticsAdapter :
     }
 
     override fun onBindViewHolder(holder: PokemonStatisticsHolder, position: Int) {
-        holder.tvStatName.text = getItem(position).stat.name
-        holder.tvStatValue.text = getItem(position).base_stat.toString()
+        val statName = getItem(position).stat.name
+        val baseState = getItem(position).base_stat.toString()
+        holder.tvStatName.text = "$statName  :"
+        holder.tvStatValue.text = baseState
     }
 
     class DiffUtilStatItemList : DiffUtil.ItemCallback<Stat>() {
